@@ -1,0 +1,265 @@
+[
+    {
+
+        "cinemaName":"Vincent Gérard",
+
+        "movies": [
+                    { movieName : "",
+
+                        "screenings ": [
+                            {
+
+                            "screening": "Attack",
+
+                            "type": 4 
+
+                            },
+
+                            {
+
+                                "screening": "Attack",
+
+                                "type": 4 
+
+                            },
+
+                           {
+
+                                "screening": "Attack",
+
+                                "type": 4 
+
+                            }
+                        ]},
+                        { movieName : "",
+
+                        "screenings ": [
+                            {
+
+                            "screening": "Attack",
+
+                            "type": 4 
+
+                            },
+
+                            {
+
+                                "screening": "Attack",
+
+                                "type": 4 
+
+                            },
+
+                           {
+
+                                "screening": "Attack",
+
+                                "type": 4 
+
+                            }
+                        ]},
+                        { movieName : "",
+
+                            "screenings ": [
+                                {
+
+                                "screening": "Attack",
+
+                                "type": 4 
+
+                                },
+
+                                {
+
+                                    "screening": "Attack",
+
+                                    "type": 4 
+
+                                },
+
+                               {
+
+                                    "screening": "Attack",
+
+                                    "type": 4 
+
+                                }
+                            ]},
+
+        ]},
+
+        {"cinemaName":"Vincent Gérard",
+
+        "movies": [
+                    { movieName : "",
+
+                        "screenings ": [
+                            {
+
+                            "screening": "Attack",
+
+                            "type": 4 
+
+                            },
+
+                            {
+
+                                "screening": "Attack",
+
+                                "type": 4 
+
+                            },
+
+                           {
+
+                                "screening": "Attack",
+
+                                "type": 4 
+
+                            }
+                        ]},
+                        { movieName : "",
+
+                        "screenings ": [
+                            {
+
+                            "screening": "Attack",
+
+                            "type": 4 
+
+                            },
+
+                            {
+
+                                "screening": "Attack",
+
+                                "type": 4 
+
+                            },
+
+                           {
+
+                                "screening": "Attack",
+
+                                "type": 4 
+
+                            }
+                        ]},
+                        { movieName : "",
+
+                            "screenings ": [
+                                {
+
+                                "screening": "Attack",
+
+                                "type": 4 
+
+                                },
+
+                                {
+
+                                    "screening": "Attack",
+
+                                    "type": 4 
+
+                                },
+
+                               {
+
+                                    "screening": "Attack",
+
+                                    "type": 4 
+
+                                }
+                            ]},
+
+        ]},
+        {"cinemaName":"Vincent Gérard",
+
+        "movies": [
+                    { movieName : "",
+
+                        "screenings ": [
+                            {
+
+                            "screening": "Attack",
+
+                            "type": 4 
+
+                            },
+
+                            {
+
+                                "screening": "Attack",
+
+                                "type": 4 
+
+                            },
+
+                           {
+
+                                "screening": "Attack",
+
+                                "type": 4 
+
+                            }
+                        ]},
+                        { movieName : "",
+
+                        "screenings ": [
+                            {
+
+                            "screening": "Attack",
+
+                            "type": 4 
+
+                            },
+
+                            {
+
+                                "screening": "Attack",
+
+                                "type": 4 
+
+                            },
+
+                           {
+
+                                "screening": "Attack",
+
+                                "type": 4 
+
+                            }
+                        ]},
+                        { movieName : "",
+
+                            "screenings ": [
+                                {
+
+                                "screening": "Attack",
+
+                                "type": 4 
+
+                                },
+
+                                {
+
+                                    "screening": "Attack",
+
+                                    "type": 4 
+
+                                },
+
+                               {
+
+                                    "screening": "Attack",
+
+                                    "type": 4 
+
+                                }
+                            ]},
+
+        ]
+
+    }
+]

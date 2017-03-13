@@ -15,7 +15,7 @@ body, h1, h2, h3, button, a{
 
 .main-container{
     width: 100%;
-    height: 100%;
+    height: 90%;
     display: block;
     margin: auto;
     position: relative;
@@ -33,6 +33,16 @@ p{
     font-size: 1.6em;
 }
 
+    /*footer*/
+footer img {
+    width: 50px;
+    display: block;
+    margin: auto;
+}
+small{
+    font-size: 1em;
+    text-align: center;
+}
     /*Color*/
 .white{
     color: #FFF;
@@ -41,14 +51,13 @@ p{
     text-align: left;
 }
 /*Giving margin or padding*/
-.spaceUp{
-    
-}
+
+
 .spaceDown{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .spacing{
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
 
@@ -73,6 +82,14 @@ p{
     .bar {
         background: linear-gradient(to bottom, rgba(0,0,0,0.99) 0%,rgba(0,0,0,0.95) 1%,rgba(125,185,232,0) 100%); 
         border: none;
+        height: 70px;
+    }
+    .bar .title{
+        height: 70px;
+        padding: 5px;    
+    }
+    .title img{ 
+        height: 100%;
     }
 
     .bar-stable .button {
@@ -92,10 +109,22 @@ p{
     body{
         font-size: 55%;
     }
+    .main-container{
+        max-width: 
+    }
+    .spaceDown{
+    margin-bottom: 30px;
+    }
+    .spacing{
+        margin: 30px 0;
+    }
 }
 
 @media screen and (min-width: 1000px){
     body{
         font-size: 55%;
+    }
+    .main-container{
+        
     }
 }

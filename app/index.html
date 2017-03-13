@@ -8,48 +8,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
     <link type="text/css" rel="stylesheet" href="ionic/css/ionic.css">
     <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
     <script src="ionic/js/ionic.bundle.js"></script>
     <script src="js/app.js"></script>
     <script src="js/main-controller.js"></script>
-   <!-- <script src="js/my-controller.js"></script>
-         -->
 
 </head>
 
 <body ng-controller="mainController">
     <div class="main">
         <ion-pane>
-            <ion-side-menus>
-                <ion-side-menu-content>
+
+             <ion-side-menu-content>
                     <ion-header-bar class="bar-stable">
                         <div class="bar bar-header">
-                          <button class="button icon ion-navicon" ng-click="toggleLeft()"></button>
+                          <button class="button icon ion-home" ui-sref="home"></button>
 
-                          <h1 class="title">Cinema Finder</h1>
-                          <button class="button">Edit</button>
+                          <h1 class="title white">Cinema Finder</h1>
+                          
                         </div>
                     </ion-header-bar>
-                </ion-side-menu-content>
+            </ion-side-menu-content>
+
             
-                <ion-side-menu side="left">
-                    <ion-list>
-                        <ion-item>Home</ion-item>
-                    </ion-list>
-                    <ion-list>
-                        <ion-item>Search by Cinema</ion-item>
-                    </ion-list>
-                    <ion-list>
-                        <ion-item>Search by Movie</ion-item>
-                    </ion-list>
-                </ion-side-menu>
-            </ion-side-menus>
-            <ion-content class="main-container">
-                
+
+
+            <ion-content class=" has-header main-container content">
                  <ui-view>
                     
                     </ui-view>
             </ion-content>
         </ion-pane>
     </div>
+   
 </body>
 </html>

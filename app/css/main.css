@@ -1,33 +1,101 @@
 body{
-
+    font-size: 50%;
+}
+body, h1, h2, h3, button, a{
+    font-family: 'Montserrat', sans-serif;    
 }
 .main{
     width: 100%;
     height: 100vh;
     display:block;
     background: rgb(16,14,35);
+    color: #FFF;
     background: linear-gradient(135deg, rgba(16,14,35,1) 1%,rgba(41,137,216,1) 37%,rgba(32,124,202,1) 48%,rgba(47,83,119,1) 100%);
 }
 
 .main-container{
-    max-width: 320px;
+    width: 100%;
+    height: 100%;
+    display: block;
     margin: auto;
+    position: relative;
 }
 
-/*Overwritting Ionic*/
-
-
-/*Header*/
-.bar {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.99) 0%,rgba(0,0,0,0.95) 1%,rgba(125,185,232,0) 100%); 
-    border: none;
+/*General*/
+    /*Headings*/
+h2{
+    font
 }
 
-.bar-stable .button {
-    border-color: transparent;
-    background-color: transparent;
+    /*Content*/
+
+p{
+    font-size: 1.6em;
+}
+
+    /*Color*/
+.white{
     color: #FFF;
 }
-.bar-header .button.icon:before{
-    font-size: 40px;
+.leftAlign{
+    text-align: left;
+}
+/*Giving margin or padding*/
+.spaceUp{
+    
+}
+.spaceDown{
+    margin-bottom: 30px;
+}
+.spacing{
+    margin: 30px 0;
+}
+
+
+/*Class personnalized per page*/
+    /*Home*/
+
+.centerPage {
+    position: absolute;
+    max-width: 250px;
+    margin: auto;
+    width: 70%;
+    left: 50%;
+    text-align: center;
+    top: 40%; /*hasheader class moves further down*/
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+
+/*Overwritting Ionic*/
+    /*Header*/
+    .bar {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.99) 0%,rgba(0,0,0,0.95) 1%,rgba(125,185,232,0) 100%); 
+        border: none;
+    }
+
+    .bar-stable .button {
+        border-color: transparent;
+        display: block;
+        background-color: transparent;
+        color: #FFF;
+    }
+    .bar-header .button.icon:before{
+        font-size: 40px;
+        color: #FFF;
+    }
+
+
+/*Media queries*/
+@media screen and (min-width: 700px){
+    body{
+        font-size: 55%;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    body{
+        font-size: 55%;
+    }
 }

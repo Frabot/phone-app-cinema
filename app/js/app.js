@@ -1,41 +1,36 @@
 var app = angular.module('app',['ui.router'])
-.config(function($stateProvider) {
-   var home = {
-            name: 'home',
-            url: '/home',
-            views: {
-                '': {
-                    templateUrl: '../home.html',
-                }
-            }
-   }
+.config(function($stateProvider, $urlRouterProvider) {
+  var home = {
+    name: 'home',
+    url: '/',
+    templateUrl: '../home.html'
+  }
   
-  var aboutState = {
-    name: 'about',
+
+  var movieDetails = {
+    name: 'Movie details',
+    url: '/movie_details',
+    templateUrl: '../movie_details.html',
+    controller: 'movieDetController'
+  }
+  
+  var movieList = {
+    name: 'Movie List',
     url: '/movie_list',
     templateUrl: '../movie_list.html'
   }
-  
-  var contactState = {
-    name: 'contact',
-    url: '/movie_details',
-    templateUrl: '../movie_details.html'
-  }
 
-  var blogState = {
-    name: 'blog',
+  var map = {
+    name: 'Map',
     url: '/map',
-    templateUrl: '../map.html'
-  }
-  
-  var blogState = {
-    name: 'blog',
-    url: '/screenings',
-    templateUrl: '../screenings.html'
+    templateUrl: '../map.html',
+    controller: 'mapController'
   }
 
+  $urlRouterProvider.otherwise("/");
   $stateProvider.state(home);
-  $stateProvider.state(aboutState);
-  $stateProvider.state(contactState);
-  $stateProvider.state(blogState);
+  $stateProvider.state(movieDetails);
+  $stateProvider.state(movieList);
+  $stateProvider.state(map);
+ 
 });

@@ -1,6 +1,4 @@
 angular.module('app')
-.controller('mainController', ['$scope', function($scope, $ionicSideMenuDelegate) {
-    $scope.toggleLeft = function() {
-        $ionicSideMenuDelegate()
-    }
-}]);
+.controller('mainController', function($scope) {
+ 
+});

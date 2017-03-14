@@ -1,6 +1,7 @@
 angular.module('app')
 .controller('mapController', function($scope) {
-    var map;
+   
+   var map;
     var infowindow;
 
     function initMap() {
@@ -48,8 +49,8 @@ angular.module('app')
         infowindow.setContent(place.name);
         infowindow.open(map, this);
       });
-    }
-
-    //var googleApiLink = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAtozyR-4A0LEo_aQAgr1H_4wUvGkyoP8E&callback=initMap";
+}
+    initMap()
+    //var googleApiLink = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAtozyR-4A0LEo_aQAgr1H_4wUvGkyoP8E";
    
 });

@@ -14,13 +14,6 @@ angular.module('app')
 
       infowindow = new google.maps.InfoWindow();
         
-    var contentString="";
-
-       contentString += " <a href=\"#\/tab\/home\/";
-       contentString += i;
-       contentString += "\"><img class=\"map-marker\" src=\"";
-       contentString += places[i].photo
-       contentString += "\"><\/a>";
 
       var service = new google.maps.places.PlacesService(map);
       service.nearbySearch({

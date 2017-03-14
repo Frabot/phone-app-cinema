@@ -1,16 +1,15 @@
 <!--
  <div class="centerPage flex">
-        <h2 class="white">Select a cinema</h2>
-    <div id="map"></div>
+        
+    
 
 </div>
 -->
-<ion-view title="Home">
-     <ion-content >
+<div class="centerPage flex">
        <!--Note the different map ID to the map template-->
-        <div id="homeMap"></div>
+         <h2 class="white">Select a cinema</h2>
+       <div id="map"></div>
         <ion-list>
            <ion-item ng-repeat="place in places" href="#/map/{{place.id}}">{{place.name}}</ion-item>
         </ion-list>
-      </ion-content>
-</ion-view>
+</div>

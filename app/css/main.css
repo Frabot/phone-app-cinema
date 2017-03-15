@@ -28,7 +28,10 @@ body, h1, h2, h3, button, a{
     }
 
         /*Content*/
-
+    a{
+        text-decoration: none;
+        display: block;
+    }
     p{
         font-size: 1.6em;
     }

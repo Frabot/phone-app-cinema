@@ -4,6 +4,6 @@ angular.module('app')
         return $http.get('./data/screeningsList.json')
         .then(function(data){
              return screeningsList.data;
-            })
+        })
     }
 });

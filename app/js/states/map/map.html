@@ -14,7 +14,7 @@
                 Cinemas list
             </div>
             <ion-list class="disable-user-behavior">
-               <ion-item class="item" ng-repeat="place in places" ui-sref="#/movie_list/{{place.place_id}}">{{place.name}}</ion-item>
+                <ion-item class="item" ng-repeat="place in places" ><a href="#/movie_list/{{place.place_id}}">{{place.name}}</a></ion-item>
             </ion-list>
    
 </div>

@@ -1,14 +1,15 @@
 angular.module('app')
 .controller('mapController', function($scope) {
    
-
+        //Places array
         $scope.places = [];
-    
-        var dublin = { lat: 53.3416542, lng: -6.2570467 };
+        
+        //Coordinates
+        var dublin = { lat: 53.34828104, lng: -6.26859236 };
 
         var map = new google.maps.Map(document.getElementById('map'), {
             center: dublin,
-            zoom: 14
+            zoom: 15
           });
         
     
@@ -25,7 +26,7 @@ angular.module('app')
             type: ['movie_theater']
         }, callback);
 
-
+        //Call of the locations?
         function callback(results, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
                 $scope.$apply(function () {
@@ -37,6 +38,7 @@ angular.module('app')
             }
         }
      
+        //Dots of the map
         function createMarker(place) {
           var placeLoc = place.geometry.location;
           var marker = new google.maps.Marker({
@@ -51,10 +53,11 @@ angular.module('app')
 
             
             
-        //adding Info to the info window 
-        var cinemaDetails = "<h4>" + place.name + "</h4>" + "<button class='button' ui-ref='#/movie_list/" +  place.place_id + "'>Go</button>" ;  
-        //<img src="{{place.icon}}" />
-            
+        //Adding Info to the info window 
+        var cinemaDetails = "<h4>" + place.name + "</h4>" + "<a href='#/movie_list/" + place.place_id + "'><button class='button'>Go</button></a>" ;  
+        
+         
+        //Click event on Marker
           google.maps.event.addListener(marker, 'click', function() {
             infowindow.setContent(cinemaDetails);
             infowindow.open(map, marker);
@@ -62,7 +65,5 @@ angular.module('app')
         
 
         }
-
-    //var googleApiLink = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAtozyR-4A0LEo_aQAgr1H_4wUvGkyoP8E";
    
 });

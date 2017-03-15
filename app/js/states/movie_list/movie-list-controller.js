@@ -1,20 +1,34 @@
 angular.module('app')
-.controller('movieListController', function($scope, $stateParams) {
-        var dublin = { lat: 53.3416542, lng: -6.2570467 };
+.controller('movieListController', function($scope, cineInfo, $stateParams) {
+        var dublin = { lat: 53.34828104, lng: -6.26859236 };
         var map;
-        
-         map = new google.maps.Map(document.getElementById('cineMap'), {
-                        center: $scope.place.location,
-                        zoom: 15,
-                        scrollwheel: false,
-                        navigationControl: false,
-                        mapTypeControl: false,
-                        scaleControl: false,
-                        draggable: false,
-                        disableDefaultUI: true
-        });
+            
+
+
+                map = new google.maps.Map(document.getElementById('cineMap'), {
+                    center: $scope.place.location,
+                    zoom: 15,
+                    scrollwheel: false,
+                    navigationControl: false,
+                    mapTypeControl: false,
+                    scaleControl: false,
+                    draggable: false,
+                    disableDefaultUI: true
+                });
+
+               function callback(results, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                $scope.$apply(function () {
+                    $scope.places = results;
+                });
+                for (var i = 0; i < results.length; i++) {
+                  createMarker(results[i]);
+                };
+            }
+        }
+            
     
-         function addMarker(place) {
+            function addMarker(place) {
             var marker = new google.maps.Marker({
                 map: map,
                 position: place.location,
@@ -36,5 +50,5 @@ angular.module('app')
                 });
             });
          }
-    
-}
+
+})

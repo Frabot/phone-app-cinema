@@ -1,49 +1,53 @@
 angular.module('app')
 .controller('mapController', function($scope) {
    
-   var map;
-    var infowindow;
+     $scope.places = [];
 
-    function initMap() {
-      var dublin = {lat: 53.34560667126015, lng: -6.262207028750026};
+        var dublin = { lat: 53.3416542, lng: -6.2570467 };
+        var infoWindow = new google.maps.InfoWindow();
 
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: dublin,
-        zoom: 15
-      });
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: dublin,
+            zoom: 15,
+            scrollwheel: false,
+            navigationControl: false,
+            mapTypeControl: false,
+            scaleControl: false,
+            draggable: false,
+            disableDefaultUI: true
+        });
 
-      infowindow = new google.maps.InfoWindow();
-        
+    //Searching for cinemas location with movie_theater
+        var service = new google.maps.places.PlacesService(map);
+          service.nearbySearch({
+            location: dublin,
+            radius: 500,
+            types: ['movie_theater']
+            }, callback)
+            .then(function(places){
+                   $scope.places = places;
+                   $scope.places.forEach(function(place){
+                       addMarker(place);
+                   })
+            });;
+            
 
-      var service = new google.maps.places.PlacesService(map);
-      service.nearbySearch({
-        location: dublin,
-        radius: 500,
-        types: ['movie_theater']
-      }, callback);
-    }
+        function addMarker(place) {
+            var marker = new google.maps.Marker({
+                map: map,
+                position: place.location,
+                icon: {
+                    url: 'https://developers.google.com/maps/documentation/javascript/images/circle.png',
+                    anchor: new google.maps.Point(10, 10),
+                    scaledSize: new google.maps.Size(10, 17)
+                }
+            });
 
-    function callback(results, status) {
-      if (status === google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < results.length; i++) {
-          createMarker(results[i]);
-        }
-      }
-    }
-
-    function createMarker(place) {
-      var placeLoc = place.geometry.location;
-      var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-      });
-
-      google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent(place.name);
-        infowindow.open(map, this);
-      });
-}
-    initMap()
+            google.maps.event.addListener(marker, 'click', function () {
+                    infoWindow.setContent(place.name);
+                    infoWindow.open(map, marker);
+            });
+        } 
     //var googleApiLink = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAtozyR-4A0LEo_aQAgr1H_4wUvGkyoP8E";
    
 });

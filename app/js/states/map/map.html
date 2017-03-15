@@ -13,8 +13,8 @@
             <div class="item item-divider">
                 Cinemas list
             </div>
-            <ion-list>
-               <ion-item class="item" ng-repeat="place in places" href="#/map/{{place.id}}">{{place.name}}</ion-item>
+            <ion-list class="disable-user-behavior">
+               <ion-item class="item" ng-repeat="place in places" ui-sref="#/movie_list/{{place.place_id}}">{{place.name}}</ion-item>
             </ion-list>
    
 </div>

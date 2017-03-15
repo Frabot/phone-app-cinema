@@ -1,6 +1,6 @@
 [
     {
-        "placesId" : "ChIJrRGxGIIOZ0gRhuM6V5yGYIQ",
+        "places_id" : "ChIJrRGxGIIOZ0gRhuM6V5yGYIQ",
         "cinemaName":"Cineworld",
 
         "movies": [
@@ -88,7 +88,7 @@
 
         ]},
 
-        {"placesId" : "ChIJA2OdnIYOZ0gRyu_gLbUe5w4",
+        {"places_id" : "ChIJA2OdnIYOZ0gRyu_gLbUe5w4",
             "cinemaName":"Savoy",
 
         "movies": [

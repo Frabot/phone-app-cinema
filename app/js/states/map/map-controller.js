@@ -11,15 +11,24 @@ angular.module('app')
             zoom: 14
           });
         
-        var cinemaDetails = `
-            <h4>{{name}}</h4>
-            <img src="{{icon}}" />
-            <button class="button button-calm" ui-ref="Movie List">Go</button>
-        `;
-       
+    
+//        //adding Info to the info window 
+//        var cinemaDetails = `
+//            <h4>{{name}}</h4>
+//            <img src="{{icon}}" />
+//            <button class="button button-calm" ui-ref="href="#/movie_list/{{place.id}}">Go</button>
+//        `;
+//       
         var infowindow = new google.maps.InfoWindow({
-            content: cinemaDetails
+            //content: cinemaDetails
         });
+//         var marker = new google.maps.Marker({
+//            position: uluru,
+//            map: map,
+//          });
+//          marker.addListener('click', function() {
+//            infowindow.open(map, marker);
+//          });
 
     
         var service = new google.maps.places.PlacesService(map);
@@ -55,7 +64,7 @@ angular.module('app')
 
           google.maps.event.addListener(marker, 'click', function() {
             infowindow.setContent(place.name);
-            infowindow.open(map, this);
+            infowindow.open(map, marker);
           });
         }
 

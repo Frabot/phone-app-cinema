@@ -1,17 +1,15 @@
-<h2>{{movie genre}}</h2>
+<div id="cineMap"></div>
+<ion-list>
+    <ion-item>{{place.text}}</ion-item>
+</ion-list>
 
-<ul>
-     <li ng-repeat="">{{poster}}<span>{{title}}</span></li>
+<h2>Movie list</h2>
+
+<ul class="list">
+     <li class="list-item" ng-repeat="movies in places_id.movieName">
+         <img src="venkman.jpg">
+          <h2>Venkman</h2>
+          <p>Back off, man. I'm a scientist.</p>
+    </li>
 </ul>
 
-<h2>{{movie genre}}</h2>
-
-<ul>
-     <li ng-repeat="">{{poster}}<span>{{title}}</span></li>
-</ul>
-
-<h2>{{movie title}}</h2>
-
-<ul>
-    <li ng-repeat="">{{poster}}<span>{{title}}</span></li> 
-</ul>

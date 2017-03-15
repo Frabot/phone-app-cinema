@@ -5,11 +5,16 @@
 
 </div>
 -->
-<div class="centerPage flex">
+<div class="">
        <!--Note the different map ID to the map template-->
-         <h2 class="white">Select a cinema</h2>
+         <h2 class="center white">Select a cinema</h2>
        <div id="map"></div>
-        <ion-list>
-           <ion-item ng-repeat="place in places" href="#/map/{{place.id}}">{{place.name}}</ion-item>
-        </ion-list>
+       
+            <div class="item item-divider">
+                Cinemas list
+            </div>
+            <ion-list>
+               <ion-item class="item" ng-repeat="place in places" href="#/map/{{place.id}}">{{place.name}}</ion-item>
+            </ion-list>
+   
 </div>

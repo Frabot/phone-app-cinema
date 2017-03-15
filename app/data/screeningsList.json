@@ -1,6 +1,6 @@
 [
     {
-
+        "placesId" : "ChIJrRGxGIIOZ0gRhuM6V5yGYIQ",
         "cinemaName":"Cineworld",
 
         "movies": [
@@ -88,7 +88,8 @@
 
         ]},
 
-        {"cinemaName":"Savoy",
+        {"placesId" : "ChIJA2OdnIYOZ0gRyu_gLbUe5w4",
+            "cinemaName":"Savoy",
 
         "movies": [
                     { movieName : "Hidden Figures",
@@ -174,7 +175,9 @@
                             ]},
 
         ]},
-        {"cinemaName":"Light House Cinema",
+        {"placesId":"ChIJi15MliMMZ0gRF0OPS9-7BCg",
+            
+            "cinemaName":"Light House Cinema",
 
         "movies": [
                     { movieName : "Elle",

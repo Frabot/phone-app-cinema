@@ -33,7 +33,7 @@ body, h1, h2, h3, button, a{
         font-size: 1.6em;
     }
 
-        /*footer*/
+    /*footer*/
     footer img {
         width: 50px;
         display: block;
@@ -43,16 +43,21 @@ body, h1, h2, h3, button, a{
         font-size: 1em;
         text-align: center;
     }
-        /*Color*/
+
+    /*Text align*/
+    .center{
+        text-align: center;
+    }
+
+    /*Color*/
     .white{
         color: #FFF;
     }
     .leftAlign{
         text-align: left;
     }
+
     /*Giving margin or padding*/
-
-
     .spaceDown{
         margin-bottom: 20px;
     }
@@ -90,6 +95,12 @@ body, h1, h2, h3, button, a{
             height: 100%;
         }
 
+    /*Map*/
+
+   #map, #cineMap {
+      height: 400px;
+    }
+
 /*Overwritting Ionic*/
     /*Header*/
     .bar {
@@ -115,7 +126,9 @@ body, h1, h2, h3, button, a{
         font-size: 40px;
         color: #FFF;
     }
-
+    .has-header{
+        top: 70px;
+    }
 
 /*Media queries*/
 @media screen and (min-width: 700px){

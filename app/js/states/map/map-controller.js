@@ -12,25 +12,12 @@ angular.module('app')
           });
         
     
-//        //adding Info to the info window 
-//        var cinemaDetails = `
-//            <h4>{{name}}</h4>
-//            <img src="{{icon}}" />
-//            <button class="button button-calm" ui-ref="href="#/movie_list/{{place.id}}">Go</button>
-//        `;
-//       
-        var infowindow = new google.maps.InfoWindow({
-            //content: cinemaDetails
-        });
-//         var marker = new google.maps.Marker({
-//            position: uluru,
-//            map: map,
-//          });
-//          marker.addListener('click', function() {
-//            infowindow.open(map, marker);
-//          });
-
+        // Creating info window called lated to appear on click event
+        var infowindow = new google.maps.InfoWindow({});
     
+        
+         
+        //Putting the type of search 
         var service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
             location: dublin,
@@ -62,10 +49,18 @@ angular.module('app')
              }
           });
 
+            
+            
+        //adding Info to the info window 
+        var cinemaDetails = "<h4>" + place.name + "</h4>" + "<button class='button' ui-ref='#/movie_list/" +  place.place_id + "'>Go</button>" ;  
+        //<img src="{{place.icon}}" />
+            
           google.maps.event.addListener(marker, 'click', function() {
-            infowindow.setContent(place.name);
+            infowindow.setContent(cinemaDetails);
             infowindow.open(map, marker);
           });
+        
+
         }
 
     //var googleApiLink = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAtozyR-4A0LEo_aQAgr1H_4wUvGkyoP8E";

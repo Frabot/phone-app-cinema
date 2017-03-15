@@ -98,7 +98,7 @@ body, h1, h2, h3, button, a{
     /*Map*/
 
    #map, #cineMap {
-      height: 400px;
+      height: 300px;
     }
 
 /*Overwritting Ionic*/

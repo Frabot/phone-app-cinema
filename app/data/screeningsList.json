@@ -4,54 +4,56 @@
         "cinemaName":"Cineworld",
         "movies": [
                     { 
-                        "movieName" : "Logan",
+                    "movieName" : "Logan",
+                    "screenings ": [
+                        {
+                        "screeningTime": "10:00",
+                        "type": "2D" 
+                        },
+                        {
+                        "screeningTime": "12:00",
+                        "type": "3D" 
+                        },
+                       {
+                        "screeningTime": "13:00",
+                        "type": "3D" 
+                        }
+                    ]},
+                    { 
+                        "movieName" : "Moonlight",
+                        "screenings ": [
+                        {
+                        "screeningTime": "10:30",
+                        "type": "2D"
+                        },
+                        {
+                            "screeningTime": "11:00",
+                            "type": "2D"
+                        },
+                       {
+                            "screeningTime": "13:00",
+                            "type": "2D"
+                        }
+                    ]},
+                    { 
+                        "movieName" : "Beauty And The Beast",
                         "screenings ": [
                             {
-                            "screeningTime": "10:00",
-                            "type": "2D" 
-                            },
-                            {
-                            "screeningTime": "12:00",
-                            "type": "3D" 
-                            },
-                           {
                             "screeningTime": "13:00",
                             "type": "3D" 
-                            }
-                        ]},
-                        { 
-                            "movieName" : "Moonlight",
-                            "screenings ": [
-                            {
-                            "screeningTime": "10:30",
-                            "type": "2D"
                             },
                             {
-                                "screeningTime": "11:00",
-                                "type": "2D"
+                                "screeningTime": "Attack",
+                                "type": "3D"
                             },
                            {
-                                "screeningTime": "13:00",
+                                "screeningTime": "Attack",
                                 "type": "2D"
                             }
-                        ]},
-                        { 
-                            "movieName" : "Beauty And The Beast",
-                            "screenings ": [
-                                {
-                                "screeningTime": "13:00",
-                                "type": "3D" 
-                                },
-                                {
-                                    "screeningTime": "Attack",
-                                    "type": "3D"
-                                },
-                               {
-                                    "screeningTime": "Attack",
-                                    "type": "2D"
-                                }
-                            ]},
-        ]},
+                        ]
+                    }
+            ]
+        },
         {
             "cineId" : "ChIJA2OdnIYOZ0gRyu_gLbUe5w4",
             "cinemaName":"Savoy",
@@ -103,8 +105,64 @@
                             "screening": "18:00",
                             "type": "2D"
                             }
-                            ]},
+                            ]}
         ]},
+        {
+            "cineId":"ChIJLRpy1pwOZ0gRKSUpLJTWUWU",   
+            "cinemaName":"Arthouse",
+            "movies": [
+                    { 
+                        "movieName" : "Elle",
+                        "screenings": [
+                            {
+                            "screening": "12:00",
+                            "type": "2D" 
+                            },
+                            {
+                            "screening": "15:00",
+                            "type": "2D"
+                            },
+                           {
+                            "screening": "18:00",
+                            "type": "2D"
+                            }
+                        ]},
+                        { 
+                        "movieName" : "Moonlight",
+                        "screenings ": [
+                            {
+                            "screening": "10:00",
+                            "type": "2D"
+                            },
+                            {
+                            "screening": "12:00",
+                            "type": "2D" 
+                            },
+                           {
+                            "screening": "14:00",
+                            "type": "2D"
+                            }
+                        ]},
+                        { 
+                        "movieName" : "Logan",
+                        "screenings ": [
+                                {
+                                "screening": "11:30",
+                                "type": "3D" 
+                                },
+                                {
+                                "screening": "13:30",
+                                "type": "2D" 
+                                },
+                               {
+                                "screening": "15:30",
+                                "type": "3D" 
+                                }
+                            ]}
+
+            ]
+
+        },
         {
             "cineId":"ChIJi15MliMMZ0gRF0OPS9-7BCg",   
             "cinemaName":"Light House Cinema",
@@ -156,7 +214,63 @@
                                 "screening": "15:30",
                                 "type": "3D" 
                                 }
-                            ]},
+                            ]}
+
+            ]
+
+        },
+        {
+            "cineId":"ChIJ2wqAKJ0OZ0gR4vWWWOJdWfU",   
+            "cinemaName":"Irish Film Institute",
+            "movies": [
+                    { 
+                        "movieName" : "Elle",
+                        "screenings": [
+                            {
+                            "screening": "12:00",
+                            "type": "2D" 
+                            },
+                            {
+                            "screening": "15:00",
+                            "type": "2D"
+                            },
+                           {
+                            "screening": "18:00",
+                            "type": "2D"
+                            }
+                        ]},
+                        { 
+                        "movieName" : "Moonlight",
+                        "screenings ": [
+                            {
+                            "screening": "10:00",
+                            "type": "2D"
+                            },
+                            {
+                            "screening": "12:00",
+                            "type": "2D" 
+                            },
+                           {
+                            "screening": "14:00",
+                            "type": "2D"
+                            }
+                        ]},
+                        { 
+                        "movieName" : "Logan",
+                        "screenings ": [
+                                {
+                                "screening": "11:30",
+                                "type": "3D" 
+                                },
+                                {
+                                "screening": "13:30",
+                                "type": "2D" 
+                                },
+                               {
+                                "screening": "15:30",
+                                "type": "3D" 
+                                }
+                            ]}
 
             ]
 

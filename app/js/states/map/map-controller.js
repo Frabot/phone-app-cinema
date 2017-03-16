@@ -5,7 +5,7 @@ angular.module('app')
         $scope.places = [];
         
         //Coordinates
-        var dublin = { lat: 53.34907832, lng: -6.26703501 };
+        var dublin = { lat: 53.3500999, lng: -6.26863528 };
 
         var map = new google.maps.Map(document.getElementById('map'), {
             center: dublin,
@@ -22,7 +22,7 @@ angular.module('app')
         var service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
             location: dublin,
-            radius: 1000,
+            radius: 800,
             type: ['movie_theater']
         }, callback);
 

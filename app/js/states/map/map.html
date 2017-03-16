@@ -1,20 +1,12 @@
-<!--
- <div class="centerPage flex">
-        
-    
+<ion-scroll>
+           <!--Note the different map ID to the map template-->
+             <h2 class="center white">Select a cinema</h2>
+           <div id="map"></div>
 
-</div>
--->
-<div class="">
-       <!--Note the different map ID to the map template-->
-         <h2 class="center white">Select a cinema</h2>
-       <div id="map"></div>
-       
-            <div class="item item-divider">
-                Cinemas list
-            </div>
-            <ion-list class="disable-user-behavior">
-                <ion-item class="item" ng-repeat="place in places" ><a href="#/movie_list/{{place.place_id}}">{{place.name}}</a></ion-item>
-            </ion-list>
-   
-</div>
+                <div class="item item-divider">
+                    Cinemas list
+                </div>
+                <ion-list class="disable-user-behavior">
+                    <ion-item ng-repeat="place in places" ><a href="#/movie_list/{{place.place_id}}" class="item" >{{place.name}}</a></ion-item>
+                </ion-list>
+</ion-scroll>

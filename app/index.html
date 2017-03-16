@@ -13,18 +13,20 @@
     <script src="ionic/js/ionic.bundle.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtozyR-4A0LEo_aQAgr1H_4wUvGkyoP8E&libraries=places"></script>
     <script src="js/app.js"></script>
+    <!-- Controllers -->
     <script src="js/main-controller.js"></script>
     <script src="js/states/map/map-controller.js"></script>
     <script src="js/states/movie_list/movie-list-controller.js"></script>
+    <!-- Services -->
     <script src="js/services/screenings.service.js"></script>
     
 
 </head>
 
 <body ng-controller="mainController">
-    <div class="main">
+    <div class="main content">
         
-
+            <!-- Header-->
              <ion-side-menu-content>
                     <ion-header-bar class="bar-stable">
                         <div class="bar bar-header">
@@ -38,12 +40,11 @@
 
             
 
-
+            <!-- View-->
             <ion-content class=" has-header main-container content">
                  <ui-view>
                     
                     </ui-view>
-                
             </ion-content>
        
            

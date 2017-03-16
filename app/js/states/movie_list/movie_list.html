@@ -1,14 +1,17 @@
-<div id="cineMap"></div>
-<ion-list>
-    <ion-item>{{place.name}}</ion-item>
-</ion-list>
+<ion-content class="content">
+    <div class="adress">
+        <img src="{{place.icon}}"/>
+        <h3 class="white">{{place.name}}</h3>
+        <address>{{place.formatted_address}}</address>
+        <p>{{place.formatted_phone_number}}</p>
+    </div>
 
-<h2>Movie list</h2>
+    <h3 class="white">Movie list</h3>
 
-<ul class="list">
-     <li class="list-item" >
-          <h2></h2>
-          <p></p>
-    </li>
-</ul>
-
+    <ion-list class="list">
+         <ion-item class="list-item" >
+              <h2></h2>
+              <p></p>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -29,7 +29,7 @@ body{
         font-size: 1.8em;
     }
     h3{
-         font-size: 1.4em;
+         font-size: 2.5em;
     }
     strong {
         font-weight: bold;
@@ -142,14 +142,20 @@ body{
     .inline{
         display: inline-block;
         padding: 5px;
-        margin: 10px 1.4em;
+        margin: 5px;
         background-color: #1c3968;
         border-radius: 10px;
     }
     .item .inline p {
         color: #FFF;
     }
-    
+    .address {
+        padding-left: 20px;
+        display: block;
+    }
+    address{
+        font-size: 1.4em;
+    }
 
 
 

@@ -1,9 +1,7 @@
 angular.module('app')
-.controller('movieListController', function($scope, cineInfo, $stateParams) {
-        var dublin = { lat: 53.34828104, lng: -6.26859236 };
+.controller('movieListController', function($scope, screeningsService, $stateParams) {
+         var dublin = { lat: 53.34828104, lng: -6.26859236 };
         var map;
-            
-
 
                 map = new google.maps.Map(document.getElementById('cineMap'), {
                     center: $scope.place.location,
@@ -26,8 +24,27 @@ angular.module('app')
                 };
             }
         }
-            
-    
+
+
+
+            //Data of screenings
+
+           screeningsService.getScreenings()
+
+                .then(function(cine) {
+
+                    if ($stateParams.id === place.cineId) { //$stateParams providing id of the state and cineId from jSON?
+
+                             $scope.place = cine;
+
+                    }
+
+                    addMarker($scope.place);
+
+                }
+
+            );
+
             function addMarker(place) {
             var marker = new google.maps.Marker({
                 map: map,
@@ -39,16 +56,29 @@ angular.module('app')
                 }
             });
 
+
+
             google.maps.event.addListener(marker, 'click', function () {
+
                 service.getDetails(place, function (result, status) {
+
                     if (status !== google.maps.places.PlacesServiceStatus.OK) {
+
                         console.error(status);
+
                         return;
+
                     }
+
                     infoWindow.setContent(result.name);
+
                     infoWindow.open(map, marker);
+
                 });
+
             });
+
          }
+
 
 })

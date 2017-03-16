@@ -5,7 +5,7 @@ angular.module('app')
         $scope.places = [];
         
         //Coordinates
-        var dublin = { lat: 53.34828104, lng: -6.26859236 };
+        var dublin = { lat: 53.34907832, lng: -6.26703501 };
 
         var map = new google.maps.Map(document.getElementById('map'), {
             center: dublin,
@@ -22,7 +22,7 @@ angular.module('app')
         var service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
             location: dublin,
-            radius: 9000,
+            radius: 1000,
             type: ['movie_theater']
         }, callback);
 
@@ -54,7 +54,7 @@ angular.module('app')
             
             
         //Adding Info to the info window 
-        var cinemaDetails = "<h4>" + place.name + "</h4>" + "<a href='#/movie_list/" + place.place_id + "'><button class='button'>Go</button></a>" ;  
+        var cinemaDetails = "<h4>" + place.name + "</h4>" + "<a href='#/movie_list/" + place.place_id + "'><button class='button button-calm'>Go</button></a>" ;  
         
          
         //Click event on Marker

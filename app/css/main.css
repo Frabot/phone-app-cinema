@@ -6,9 +6,7 @@ html {
 body{
     font-size: 50%;
 }
-body, h1, h2, h3, button, a{
-    font-family: 'Montserrat', sans-serif;    
-}
+
 .main{
     width: 100%;
     min-height: 100vh;
@@ -26,11 +24,13 @@ body, h1, h2, h3, button, a{
 }
 
 /*General*/
-    /*Headings*/
-    h2{
-        font
-    }
 
+body, h1, h2, h3, button, a{
+    font-family: 'Montserrat', sans-serif;    
+}
+    h2{
+        font-size: 1.8em;
+    }
         /*Content*/
     a{
         text-decoration: none;

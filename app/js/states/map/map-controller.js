@@ -25,6 +25,8 @@ angular.module('app')
             radius: 800,
             type: ['movie_theater']
         }, callback);
+    
+        
 
         //Call of the locations?
         function callback(results, status) {
@@ -54,7 +56,7 @@ angular.module('app')
             
             
         //Adding Info to the info window 
-        var cinemaDetails = "<h4>" + place.name + "</h4>" + "<a href='#/movie_list/" + place.place_id + "'><button class='button button-calm'>Go</button></a>" ;  
+        var cinemaDetails = "<h4>" + place.name + "</h4>" + "<img src='"+ place.photos[0].getUrl({'maxWidth': 60}) + "'/>" + "<a href='#/movie_list/" + place.place_id + "'><button>Go</button></a>" ;  
         
          
         //Click event on Marker

@@ -10,7 +10,7 @@
         <h2>Movie list</h2>
     </div>
     <ion-list class="disable-user-behavior">
-         <ion-item class="item" ng-repeat="movie in screenings">
+         <ion-item class="item" ng-repeat="movie in screeningsCine">
               <h2>{{movie.movieName}}</h2>
               <ul>
                   <li ng-repeat="times in movie.screenings">{{times.screeningTime}}</li>

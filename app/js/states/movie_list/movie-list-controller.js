@@ -2,8 +2,8 @@ angular.module('app')
 .controller('movieListController', function($scope, $http, screeningsService, $stateParams) {
     
             //Getting screenings info for V1 
-            $http.get('../../../data/screeningsListV1.json').then(function(screenings){
-                 $scope.screenings = screenings.data;
+            $http.get('../../../data/screeningsListV1.json').then(function(screeningsCine){
+                 $scope.screeningsCine = screeningsCine.data;
              }) 
     
 //            var map = new google.maps.Map( {

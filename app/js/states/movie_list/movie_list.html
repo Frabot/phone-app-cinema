@@ -1,17 +1,19 @@
 <ion-content>
+<!--
    <div class="address">
        <h3>{{place.name}}</h3>
        <address>{{place}}
        </address>
-
+    </div>
+-->
     <div class="item item-divider">
         <h2>Movie list</h2>
     </div>
-    <ion-list class="list">
-         <ion-item class="list-item" ng-repeat="movie in cinema">
+    <ion-list class="disable-user-behavior">
+         <ion-item class="item" ng-repeat="movie in screenings">
               <h2>{{movie.movieName}}</h2>
               <ul>
-                  <li ng-repeat="times in movie.screenings">{{times.screening}}</li>
+                  <li ng-repeat="times in movie.screenings">{{times.screeningTime}}</li>
              </ul>
         </ion-item>
     </ion-list>

@@ -1,38 +1,43 @@
 angular.module('app')
-.controller('movieListController', function($scope, screeningsService, $stateParams) {
+.controller('movieListController', function($scope, $http, screeningsService, $stateParams) {
     
-            var map = new google.maps.Map( {
-            center: place.geometry.location;
-            });
-
+            //Getting screenings info for V1 
+            $http.get('../../../data/screeningsListV1.json').then(function(screenings){
+                 $scope.screenings = screenings.data;
+             }) 
     
-         var service = new google.maps.places.PlacesService(map);  
-            service.getDetails({
-            placeId: place.place_id
-          }, function(place, status) {
-            if (status === google.maps.places.PlacesServiceStatus.OK) {
-              var marker = new google.maps.Marker({
-                map: map,
-                position: place.geometry.location
-              });
-              google.maps.event.addListener(marker, 'click', function() {
-                infowindow.setContent(place.name);
-                infowindow.open(map, this);
-              });
-            }
-          });
-
-       
-
-      //Data of screenings
-           screeningsService.getScreenings()                  
-            .then(function (cinemas) {
-               cinemas.forEach(function (cinema) {
-                    if ($stateParams.place_id === cinema.cineId) { //$stateParams providing id of the state and cineId from jSON?
-                        $scope.cinema = cinema;
-                    }
-                });
-            });
+//            var map = new google.maps.Map( {
+//            center: place.geometry.location;
+//            });
+//
+//    
+//         var service = new google.maps.places.PlacesService(map);  
+//            service.getDetails({
+//            placeId: place.place_id
+//          }, function(place, status) {
+//            if (status === google.maps.places.PlacesServiceStatus.OK) {
+//              var marker = new google.maps.Marker({
+//                map: map,
+//                position: place.geometry.location
+//              });
+//              google.maps.event.addListener(marker, 'click', function() {
+//                infowindow.setContent(place.name);
+//                infowindow.open(map, this);
+//              });
+//            }
+//          });
+//
+//       
+//
+//      //Data of screenings
+//           screeningsService.getScreenings()                  
+//            .then(function (cinemas) {
+//               cinemas.forEach(function (cinema) {
+//                    if ($stateParams.place_id === cinema.cineId) { //$stateParams providing id of the state and cineId from jSON?
+//                        $scope.cinema = cinema;
+//                    }
+//                });
+//            });
     
     
 })

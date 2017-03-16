@@ -1,6 +1,6 @@
 <ion-content class="content">
     <div class="adress">
-        <img src="{{place.icon}}"/>
+        <img ng-src="{{place.icon}}"/>
         <h3 class="white">{{place.name}}</h3>
         <address>{{place.formatted_address}}</address>
         <p>{{place.formatted_phone_number}}</p>
@@ -9,9 +9,11 @@
     <h3 class="white">Movie list</h3>
 
     <ion-list class="list">
-         <ion-item class="list-item" >
-              <h2></h2>
-              <p></p>
+         <ion-item class="list-item" ng-repeat="movie in place.cineID">
+              <h2>{{place.movieName}}</h2>
+              <ul>
+                  <li ng-repeat="times in movie.screenings">{{times.screening}}</li>
+             </ul>
         </ion-item>
     </ion-list>
 </ion-content>

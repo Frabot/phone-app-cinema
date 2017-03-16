@@ -4,14 +4,12 @@ angular.module('app')
     
       //Data of screenings
            screeningsService.getScreenings()                  
-            .then(function (cine) {
-                cine.forEach(function (aCine) {
-                    if ($stateParams.place_id === aCine.cineId) { //$stateParams providing id of the state and cineId from jSON?
-                        $scope.aCine = cine;
+            .then(function (places) {
+               places.forEach(function (place) {
+                    if ($stateParams.place_id === place.cineId) { //$stateParams providing id of the state and cineId from jSON?
+                        $scope.place = place;
                     }
                 });
-
-            
             });
     
     

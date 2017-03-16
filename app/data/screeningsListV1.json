@@ -1,7 +1,7 @@
 [
     { 
     "movieName" : "Logan",
-    "screenings ": [
+    "screenings": [
         {
         "screeningTime": "10:00",
         "type": "2D" 
@@ -17,7 +17,7 @@
     ]},
     { 
         "movieName" : "Moonlight",
-        "screenings ": [
+        "screenings": [
         {
         "screeningTime": "10:30",
         "type": "2D"
@@ -33,17 +33,17 @@
     ]},
     { 
         "movieName" : "Beauty And The Beast",
-        "screenings ": [
+        "screenings": [
             {
             "screeningTime": "13:00",
             "type": "3D" 
             },
             {
-                "screeningTime": "Attack",
+                "screeningTime": "15:00",
                 "type": "3D"
             },
            {
-                "screeningTime": "Attack",
+                "screeningTime": "18:00",
                 "type": "2D"
             }
         ]

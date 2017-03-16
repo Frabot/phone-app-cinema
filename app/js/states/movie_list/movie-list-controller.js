@@ -5,12 +5,12 @@ angular.module('app')
             $http.get('../../../data/screeningsListV1.json').then(function(screeningsCine){
                  $scope.screeningsCine = screeningsCine.data;
              }) 
-    
+//    
 //            var map = new google.maps.Map( {
 //            center: place.geometry.location;
 //            });
-//
-//    
+
+    
 //         var service = new google.maps.places.PlacesService(map);  
 //            service.getDetails({
 //            placeId: place.place_id
@@ -26,7 +26,7 @@ angular.module('app')
 //              });
 //            }
 //          });
-//
+
 //       
 //
 //      //Data of screenings

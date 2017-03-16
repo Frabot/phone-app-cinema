@@ -13,7 +13,7 @@
          <ion-item class="item" ng-repeat="movie in screeningsCine">
               <h2>{{movie.movieName}}</h2>
               <ul>
-                  <li ng-repeat="times in movie.screenings">{{times.screeningTime}}</li>
+                  <li ng-repeat="screeningTime in movie.screenings" class="inline"><p>{{screeningTime.screeningTime}}  <strong>{{screeningTime.type}}</strong></p></li>
              </ul>
         </ion-item>
     </ion-list>

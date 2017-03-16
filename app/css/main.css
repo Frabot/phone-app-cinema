@@ -1,13 +1,10 @@
-html {
-
-    overflow: auto;
-
-}
 body{
     font-size: 50%;
 }
 
 .main{
+    overflow: auto;
+    height: 100%;
     width: 100%;
     min-height: 100vh;
     display:block;
@@ -25,12 +22,19 @@ body{
 
 /*General*/
 
-body, h1, h2, h3, button, a{
-    font-family: 'Montserrat', sans-serif;    
-}
+    body, h1, h2, h3, button, a{
+        font-family: 'Montserrat', sans-serif;    
+    }
     h2{
         font-size: 1.8em;
     }
+    h3{
+         font-size: 1.4em;
+    }
+    strong {
+        font-weight: bold;
+    }
+
         /*Content*/
     a{
         text-decoration: none;
@@ -41,6 +45,9 @@ body, h1, h2, h3, button, a{
     }
 
     /*footer*/
+    footer {
+        opacity: 0.5;
+    }
     footer img {
         width: 50px;
         display: block;
@@ -90,6 +97,15 @@ body, h1, h2, h3, button, a{
         top: 40%; /*hasheader class moves further down*/
         transform: translateX(-50%) translateY(-50%);
     }
+        /*hover*/
+        .centerPage button {
+            transition: all 0.5s ease-in;
+        }
+        .centerPage button:hover, .centerPage button:focus {
+            background-color: #1c3968;
+            cursor: pointer;
+
+        }
         /*Hiding buttons*/
         .soon{
             display: inline-block;
@@ -107,10 +123,35 @@ body, h1, h2, h3, button, a{
         }
 
     /*Map*/
-
-   #map, #cineMap {
-      height: 300px;
+   #map {
+      height: 200px;
     }
+
+        /*List items*/
+        .hoverItem{
+            transition: all 0.5s ease-in;
+        }
+        .hoverItem:hover, .hoverItem:focus{
+            background: #1c3968;
+        }
+        .hoverItem:hover a.item, .hoverItem:focus a.item{
+            color: #FFF;
+        }
+
+    /*Movie list*/
+    .inline{
+        display: inline-block;
+        padding: 5px;
+        margin: 10px 1.4em;
+        background-color: #1c3968;
+        border-radius: 10px;
+    }
+    .item .inline p {
+        color: #FFF;
+    }
+    
+
+
 
 /*Overwritting Ionic*/
     /*Header*/
@@ -136,13 +177,23 @@ body, h1, h2, h3, button, a{
     .bar-header .button.icon:before{
         font-size: 40px;
         color: #FFF;
+        transition: all 0.5 ease-in;
     }
     .has-header{
         top: 70px;
     }
+    
+
+    /*List items*/
+    .item {
+        white-space: normal
+    }
     a.item {
         color: black;
     } 
+    a.item:hover {
+        color: #FFF;
+    }
 
 /*Media queries*/
 @media screen and (min-width: 700px){
@@ -157,6 +208,10 @@ body, h1, h2, h3, button, a{
     }
     .spacing{
         margin: 30px 0;
+    }
+     /*Map*/
+   #map {
+      height: 300px;
     }
 }
 

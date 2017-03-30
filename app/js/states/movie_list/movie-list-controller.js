@@ -14,6 +14,18 @@ angular.module('app')
 
            var service = new google.maps.places.PlacesService(map);
 
+		   
+		//http://stackoverflow.com/questions/13590465/random-time-generator-for-time-betweeen-7am-to-11am
+				` Random random = new Random();
+			TimeSpan start = TimeSpan.FromHours(7);
+			TimeSpan end = TimeSpan.FromHours(11);
+			int maxMinutes = (int)((end - start).TotalMinutes);
+
+			for (int i = 0; i < 100; ++i) {
+			   int minutes = random.Next(maxMinutes);
+			   TimeSpan t = start.Add(TimeSpan.FromMinutes(minutes));
+			   // Do something with t...
+			} `
 
 	        service.getDetails({
 	          placeId: $stateParams.id
